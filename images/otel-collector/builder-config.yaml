@@ -19,6 +19,7 @@ dist:
 
 extensions:
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/healthcheckextension v0.147.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/extension/opampextension v0.147.0
 
 receivers:
   # OTLP (gRPC + HTTP) — all services push here
@@ -37,6 +38,7 @@ processors:
   - gomod: go.opentelemetry.io/collector/processor/memorylimiterprocessor v0.147.0
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor v0.147.0
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/filterprocessor v0.147.0
+  - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/probabilisticsamplerprocessor v0.147.0
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/cumulativetodeltaprocessor v0.147.0
   # Transform — OTTL-based attribute manipulation (promote Docker labels to resource attributes)
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor v0.147.0
