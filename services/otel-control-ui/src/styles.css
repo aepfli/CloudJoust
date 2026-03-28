@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0a0a0f;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  color: #a0a0b0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #1a1a2e;
+  border: 1px solid #2a2a3e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: #4a4a6e;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.card .description {
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.card .current {
+  font-size: 0.8rem;
+  color: #60a5fa;
+  margin-bottom: 0.8rem;
+}
+
+.variants {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.variant-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #3a3a5e;
+  border-radius: 8px;
+  background: #12121e;
+  color: #c0c0d0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.15s;
+}
+
+.variant-btn:hover {
+  background: #2a2a4e;
+  border-color: #60a5fa;
+}
+
+.variant-btn.active {
+  background: #1e3a5f;
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+
+.presets {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.preset-btn {
+  padding: 0.8rem 1.5rem;
+  border: 2px solid;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.preset-btn.blast {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+.preset-btn.blast:hover {
+  background: #ef44441a;
+}
+
+.preset-btn.quiet {
+  border-color: #22c55e;
+  color: #22c55e;
+}
+.preset-btn.quiet:hover {
+  background: #22c55e1a;
+}
+
+.preset-btn.reset {
+  border-color: #888;
+  color: #888;
+}
+.preset-btn.reset:hover {
+  background: #8881a;
+}
+
+.preset-btn.debug {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+.preset-btn.debug:hover {
+  background: #f59e0b1a;
+}
+
+.status-bar {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #12121e;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.links a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}

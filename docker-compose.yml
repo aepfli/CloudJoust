@@ -684,6 +684,23 @@ services:
           cpus: '0.25'
     logging: *default-logging
 
+  # OTel Control UI (Observability flag management)
+  otel-control-ui:
+    build:
+      context: services/otel-control-ui
+    container_name: joustmania-otel-control-ui
+    expose:
+      - "8080"
+    networks:
+      - joustmania
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 64m
+          cpus: '0.25'
+    logging: *default-logging
+
   # Envoy - Main entry point (reverse proxy)
   # No dependencies - envoy uses STRICT_DNS and handles unavailable backends with 503
   envoy:

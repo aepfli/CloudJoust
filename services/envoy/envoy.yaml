@@ -108,6 +108,12 @@ static_resources:
                             body:
                               inline_string: "OK"
 
+                        # OTel Control UI
+                        - match:
+                            prefix: "/otel-control/"
+                          route:
+                            cluster: otel_control_ui
+
                         # Dashboard SPA (catch-all)
                         # static-web-server handles SPA fallback internally
                         - match:
@@ -235,6 +241,20 @@ static_resources:
                   address:
                     socket_address:
                       address: dashboard
+                      port_value: 8080
+
+    # OTel Control UI (static-web-server)
+    - name: otel_control_ui
+      type: STRICT_DNS
+      lb_policy: ROUND_ROBIN
+      load_assignment:
+        cluster_name: otel_control_ui
+        endpoints:
+          - lb_endpoints:
+              - endpoint:
+                  address:
+                    socket_address:
+                      address: otel-control-ui
                       port_value: 8080
 
     # OTEL Collector for trace export (gRPC on port 4317)
